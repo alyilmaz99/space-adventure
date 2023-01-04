@@ -54,9 +54,9 @@ public class PlanetController : MonoBehaviour
             //orbitChange = false;
         }
         else if (other.gameObject.tag == "Blackhole")
-        {
-            
+        {            
             Destroy(gameObject);
+            gameManager.GetComponent<GameManager>().successCheck = true;
         }
 
     }
