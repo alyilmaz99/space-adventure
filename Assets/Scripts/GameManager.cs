@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         StartSoundVibCheck();
+        Time.timeScale = 1;
 
     }
 
@@ -213,12 +214,15 @@ public class GameManager : MonoBehaviour
     public void RetryButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
     }
 
     public void NextLevelButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
+
+    
 
 
     #endregion
