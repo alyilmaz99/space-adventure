@@ -8,6 +8,7 @@ public class MenuUI : MonoBehaviour
 {
     [SerializeField] private GameObject SettingsScreen;
 
+    [SerializeField] private int sceneIndexNumber;
 
 
     [Header("sound/Vib Settings")]
@@ -23,6 +24,8 @@ public class MenuUI : MonoBehaviour
     void Start()
     {
         StartSoundVibCheck();
+
+        sceneIndexNumber=PlayerPrefs.GetInt("SceneNumber");
     }
 
     
@@ -35,7 +38,14 @@ public class MenuUI : MonoBehaviour
 
     public void StartButton()
     {
-        SceneManager.LoadScene(3);
+        if (PlayerPrefs.HasKey("SceneNumber"))
+        {
+            SceneManager.LoadScene(sceneIndexNumber);
+        }
+        else
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 
     public void OpenSettings()
