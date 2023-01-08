@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     //public GameObject orbit1;
 
 
+
+    [SerializeField] private int sceneIndexNumber;
+
     public GameObject orbit1,orbit2,orbit3,orbit4,orbit5;
     public int orbitCount;
     public bool movementCheck;
@@ -40,6 +43,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        sceneIndexNumber= SceneManager.GetActiveScene().buildIndex;
+        PlayerPrefs.SetInt("SceneNumber", sceneIndexNumber);
+
         StartSoundVibCheck();
         Time.timeScale = 1;
 
