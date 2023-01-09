@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MenuUI : MonoBehaviour
 {
     [SerializeField] private GameObject SettingsScreen;
+    [SerializeField] private GameObject LevelsScreen;
 
     [SerializeField] private int sceneIndexNumber;
 
@@ -115,7 +116,15 @@ public class MenuUI : MonoBehaviour
     }
 
 
+    public void openLevelScreen()
+    {
+        LevelsScreen.gameObject.SetActive(true);
+    }
 
+    public void closeLevelScreen()
+    {
+        LevelsScreen.gameObject.SetActive(false);
+    }
 
 
 
