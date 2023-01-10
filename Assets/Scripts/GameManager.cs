@@ -176,6 +176,8 @@ public class GameManager : MonoBehaviour
         if (successCheck)
         {
             successScreen.gameObject.SetActive(true);
+            var x = GameObject.FindGameObjectWithTag("stargiver");
+            x.GetComponent<stargiver>().showstar();
         }
     }
 
