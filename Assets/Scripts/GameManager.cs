@@ -1,3 +1,4 @@
+using GoogleMobileAds.Api;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,10 +8,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    //public LayerMask mask;
-    //public bool collidercheck1=true;
-    //public GameObject orbit1;
-
+    
 
 
     [SerializeField] private int sceneIndexNumber;
@@ -28,6 +26,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject successScreen;
     [SerializeField] private GameObject endScreen;
     [SerializeField] private GameObject settingsScreen;
+    [SerializeField] private GameObject pauseButton;
 
     [Header("sound/Vib Settings")]
     [SerializeField] private GameObject soundButton;
@@ -39,15 +38,35 @@ public class GameManager : MonoBehaviour
     [SerializeField] private bool vibFixer;
 
 
+    [Header("Ads Settings")]
+    [SerializeField] private GameObject gameManager;
+
+
+
+    [Header("Reborn Settings")]
+    
+    [SerializeField] private List<GameObject> orbitList = new List<GameObject>();
+    [SerializeField] private List<GameObject> lastOrbitList = new List<GameObject>();
+    private GameObject[] orbitArray;
+    [SerializeField] private List<Transform> orbitTransformList = new List<Transform>();
+    [SerializeField] private GameObject lastOrbit;
+
+
+
 
 
     void Start()
     {
-        sceneIndexNumber= SceneManager.GetActiveScene().buildIndex;
+        gameManager = GameObject.FindGameObjectWithTag("GameController");
+
+
+        sceneIndexNumber = SceneManager.GetActiveScene().buildIndex;
         PlayerPrefs.SetInt("SceneNumber", sceneIndexNumber);
 
         StartSoundVibCheck();
         Time.timeScale = 1;
+
+        SetOrbitList();
 
     }
 
@@ -59,6 +78,17 @@ public class GameManager : MonoBehaviour
 
         SuccessScreen();
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+          //  SetRebornPositions();
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+           // RebornExp();
+        }
+
+        //Debug.Log(orbitTransformList[0].transform.position);
 
         //if (collidercheck1)
         //{
@@ -192,11 +222,14 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0;
         pauseScreen.gameObject.SetActive(true);
+        pauseButton.gameObject.SetActive(false);
+
     }
     public void closePauseScreen()
     {
         Time.timeScale = 1;
         pauseScreen.gameObject.SetActive(false);
+        pauseButton.gameObject.SetActive(true);
     }
 
     public void openSettingsScreen()
@@ -217,10 +250,14 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    // lose screen Continue Button
+
     public void RetryButton()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        
+        gameManager.GetComponent<rewardads>().WatchRebornAd();
+
+       // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
 
     public void NextLevelButton()
@@ -292,6 +329,52 @@ public class GameManager : MonoBehaviour
             vibFixer = false;
         }
     }
+
+    #endregion
+
+    #region Ads Settings
+
+    private void Reborn(object sender, Reward e)
+    {
+        Debug.Log("yeniden dogdu");
+        pauseButton.SetActive(true);
+
+        Time.timeScale = 1;
+    }
+
+    public void SetRebornPositions()
+    {
+        orbitTransformList.Clear();
+        lastOrbit = orbitList[orbitCount - 1];
+
+        for (int i = 0; i < lastOrbit.transform.childCount; i++)
+        {
+            GameObject child = lastOrbit.transform.GetChild(i).gameObject;
+            orbitTransformList.Add(child.transform);
+            lastOrbitList.Add(child);
+        }
+    }
+
+    public void RebornExp()
+    {
+        for (int i = 0; i < lastOrbitList.Count; i++)
+        {
+            lastOrbitList[i].transform.position = orbitTransformList[i].transform.position;
+            lastOrbitList[i].transform.parent = lastOrbit.transform;
+
+        }
+    }
+
+    private void SetOrbitList()
+    {
+        orbitArray = GameObject.FindGameObjectsWithTag("Orbit");
+        foreach (GameObject gameObject in orbitArray)
+        {
+            orbitList.Add(gameObject);
+        }
+    }
+
+
 
     #endregion
 

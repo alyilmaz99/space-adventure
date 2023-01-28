@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using GoogleMobileAds.Api;
 using System;
+using UnityEngine.SceneManagement;
 
 public class rewardads : MonoBehaviour
 {
     private RewardedAd rewardedAd;
+
+    public string adUnityId;
 
     public void Start()
     {
@@ -14,22 +17,24 @@ public class rewardads : MonoBehaviour
 
         RequestRewardedVideo();
 
-        if(rewardedAd.IsLoaded())
-           rewardedAd.Show();
+
+
+        //if (rewardedAd.IsLoaded())
+        //    rewardedAd.Show();
     }
 
     public void RequestRewardedVideo()
     {
-        string adUnitId;
-        #if UNITY_ANDROID
-            adUnitId = "ca-app-pub-3940256099942544/5224354917";
-        #elif UNITY_IPHONE
+        string adUnityId;
+#if UNITY_ANDROID
+        adUnityId = "ca-app-pub-3940256099942544/5224354917";
+#elif UNITY_IPHONE
             adUnitId = "ca-app-pub-3940256099942544/1712485313";
-        #else
+#else
             adUnitId = "unexpected_platform";
-        #endif
+#endif
 
-        this.rewardedAd = new RewardedAd(adUnitId);
+        this.rewardedAd = new RewardedAd(adUnityId);
 
         // Called when an ad request has successfully loaded.
         this.rewardedAd.OnAdLoaded += HandleRewardedAdLoaded;
@@ -80,4 +85,38 @@ public class rewardads : MonoBehaviour
     {
         Debug.Log("reward");
     }
+
+
+    #region Ads Settings
+
+    // no ads satýn alma kontrolü yapýlacak. Reklamsýz izleme alýndýysa reklam izleme fonksiyonuna gidilmeyecek
+    public void WatchRebornAd()
+    {
+        WatchAd();
+    }
+    void WatchAd()
+    {
+        if (this.rewardedAd != null)
+        {
+            this.rewardedAd.Destroy();
+
+        }
+
+        if (this.rewardedAd.IsLoaded())
+        {
+            this.rewardedAd.Show();
+        }
+        this.rewardedAd.OnUserEarnedReward += Replay;
+
+        
+
+
+    }
+    private void Replay(object sender, Reward e)
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+
+    #endregion
 }

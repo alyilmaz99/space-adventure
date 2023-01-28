@@ -250,6 +250,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1020788824005429382, guid: 405d6c82a51527942a0ea6a3f1d62d05, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020788824236206531, guid: 405d6c82a51527942a0ea6a3f1d62d05, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 405d6c82a51527942a0ea6a3f1d62d05, type: 3}
 --- !u!1 &58297450
@@ -467,11 +475,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &811927130 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5273746910250116548, guid: 1ef3371e7cf867a408b927ddbf2850ff, type: 3}
-  m_PrefabInstance: {fileID: 1122778117}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &970021800
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,6 +563,11 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5867851744161986441, guid: 1ef3371e7cf867a408b927ddbf2850ff, type: 3}
   m_PrefabInstance: {fileID: 1122778117}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1031754889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5207759701748898006, guid: 0f93ad768d9d23e458295bceacf6c2a6, type: 3}
+  m_PrefabInstance: {fileID: 2019337829}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1034447156
 GameObject:
@@ -784,7 +792,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f25d6b439440b2248a42ec4d968c4411, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1237,17 +1245,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ef3371e7cf867a408b927ddbf2850ff, type: 3}
+--- !u!1 &1122778118 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1722697335717176708, guid: 1ef3371e7cf867a408b927ddbf2850ff, type: 3}
+  m_PrefabInstance: {fileID: 1122778117}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1122778119 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8734301432105726157, guid: 1ef3371e7cf867a408b927ddbf2850ff, type: 3}
+  m_PrefabInstance: {fileID: 1122778117}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1410989793 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5207759701748898007, guid: 0f93ad768d9d23e458295bceacf6c2a6, type: 3}
   m_PrefabInstance: {fileID: 2019337829}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1031754889}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd109f5a46d51744caaf8020ad00b9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1410989796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031754889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2763560378436f147b1cbac4e5a0a3bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  adUnityId: 
 --- !u!1 &1451816952 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5537333993744313690, guid: 1ef3371e7cf867a408b927ddbf2850ff, type: 3}
@@ -1351,7 +1382,7 @@ PrefabInstance:
     - target: {fileID: 5207759701748898007, guid: 0f93ad768d9d23e458295bceacf6c2a6, type: 3}
       propertyPath: endScreen
       value: 
-      objectReference: {fileID: 811927130}
+      objectReference: {fileID: 1122778119}
     - target: {fileID: 5207759701748898007, guid: 0f93ad768d9d23e458295bceacf6c2a6, type: 3}
       propertyPath: vibButton
       value: 
@@ -1360,6 +1391,10 @@ PrefabInstance:
       propertyPath: orbitCount
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5207759701748898007, guid: 0f93ad768d9d23e458295bceacf6c2a6, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 1122778118}
     - target: {fileID: 5207759701748898007, guid: 0f93ad768d9d23e458295bceacf6c2a6, type: 3}
       propertyPath: pauseScreen
       value: 
@@ -1543,7 +1578,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f25d6b439440b2248a42ec4d968c4411, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
