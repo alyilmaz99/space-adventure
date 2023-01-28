@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5207759701748898006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5207759701748898004}
+  - component: {fileID: 5207759701748898007}
+  - component: {fileID: 1434779783}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &5207759701748898004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5207759701748898006}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.36379072, y: -0.6841581, z: -0.038051173}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5207759701748898007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5207759701748898006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd109f5a46d51744caaf8020ad00b9ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneIndexNumber: 0
+  orbit1: {fileID: 0}
+  orbit2: {fileID: 0}
+  orbit3: {fileID: 0}
+  orbit4: {fileID: 0}
+  orbit5: {fileID: 0}
+  orbitCount: 4
+  movementCheck: 0
+  endGameCheck: 0
+  successCheck: 0
+  pauseScreen: {fileID: 0}
+  successScreen: {fileID: 0}
+  endScreen: {fileID: 0}
+  settingsScreen: {fileID: 0}
+  pauseButton: {fileID: 0}
+  soundButton: {fileID: 0}
+  vibButton: {fileID: 0}
+  soundSpriteList:
+  - {fileID: 21300000, guid: 59a33ce84c44c434a875cf1171a38964, type: 3}
+  - {fileID: 21300000, guid: 9b8b9a553762c804b98ffe3258ad0a9f, type: 3}
+  vibSpriteList:
+  - {fileID: 21300000, guid: a2e458d8ce87ad8439c4165f8b7652e0, type: 3}
+  - {fileID: 21300000, guid: ee5734f3058716b4ab050f658dfe068d, type: 3}
+  soundFixer: 0
+  vibFixer: 0
+--- !u!114 &1434779783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5207759701748898006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ad296f4c4a4b84b9f48a86b39eb1a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planetSpriteList:
+  - {fileID: 21300000, guid: 4f7e7253bb054ef47afc10645f442fac, type: 3}
+  - {fileID: 21300000, guid: 2f6712fefca75a64b8b03c609e4b0cfa, type: 3}
+  - {fileID: 21300000, guid: f6b9dfe9fe3e42d41a9a9a8797bf0fc3, type: 3}
+  - {fileID: 21300000, guid: 0a31965c8a081e04cb3a809e1b9d5572, type: 3}
+  - {fileID: 21300000, guid: 044c1331cbc2f2a4fb381f5b5b2f2e77, type: 3}
+  - {fileID: 21300000, guid: a0272ca552d9a324ca2166dc86082d85, type: 3}
+  - {fileID: 21300000, guid: 5d8a25fc95d502a4bb581b4811d408f9, type: 3}
+  - {fileID: 21300000, guid: 1889eee5ba286b14a89b8b5707f1a003, type: 3}
+  - {fileID: 21300000, guid: 7c250d48b74067742a839ec5e41fe321, type: 3}
+  - {fileID: 21300000, guid: d3ccddac6c0d44e47afb8ddb31449772, type: 3}
+  - {fileID: 21300000, guid: ce5355e9e9f26094e8ce89a266310da0, type: 3}
+  - {fileID: 21300000, guid: 29598cb9ec76db749a99e75547720e3d, type: 3}
+  - {fileID: 21300000, guid: 1d59a970cb98f45498ab63826c0a095f, type: 3}
+  planetList: []
