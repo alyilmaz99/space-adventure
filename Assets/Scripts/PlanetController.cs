@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlanetController : MonoBehaviour
 {
@@ -54,9 +55,12 @@ public class PlanetController : MonoBehaviour
             //orbitChange = false;
         }
         else if (other.gameObject.tag == "Blackhole")
-        {            
+        {
+            //Stars
+            PlayerPrefs.SetInt("s" + (SceneManager.GetActiveScene().buildIndex-1).ToString(), 3 );
             Destroy(gameObject);
             gameManager.GetComponent<GameManager>().successCheck = true;
+
         }
 
     }
