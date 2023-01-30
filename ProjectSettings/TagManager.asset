@@ -7,7 +7,6 @@ TagManager:
   - Orbit
   - Planet
   - Blackhole
-  - stargiver
   layers:
   - Default
   - TransparentFX

@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f25d6b439440b2248a42ec4d968c4411, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5d8a25fc95d502a4bb581b4811d408f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -113,10 +113,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.61
-  m_Height: 5.12
+  m_Radius: 2.5345154
+  m_Height: 5.069031
   m_Direction: 1
-  m_Center: {x: -0.0000019073486, y: 0, z: 0}
+  m_Center: {x: -0.075486556, y: 0.07548446, z: 0}
 --- !u!114 &1020788822198136964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,6 +133,7 @@ MonoBehaviour:
   target: {fileID: 1020788823582787963}
   targetPosition: {x: 0, y: 0}
   movementSpeed: 5
+  gameManager: {fileID: 0}
 --- !u!1 &1020788822535352033
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 3
   direction: 0
+  gameManager: {fileID: 0}
 --- !u!136 &1020788822535352037
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -349,6 +351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 5
   direction: 1
+  gameManager: {fileID: 0}
 --- !u!136 &1020788823042797547
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -565,6 +568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 5
   direction: 1
+  gameManager: {fileID: 0}
 --- !u!1 &1020788824005429376
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,7 +645,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f25d6b439440b2248a42ec4d968c4411, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5d8a25fc95d502a4bb581b4811d408f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -678,10 +682,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.6100001
-  m_Height: 5.1200004
+  m_Radius: 2.5429022
+  m_Height: 5.0858045
   m_Direction: 1
-  m_Center: {x: 0.0000019073486, y: 0, z: 0}
+  m_Center: {x: -0.06709586, y: 0.06709775, z: 0}
 --- !u!114 &1020788824005429381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -698,6 +702,7 @@ MonoBehaviour:
   target: {fileID: 1020788823582787963}
   targetPosition: {x: 0, y: 0}
   movementSpeed: 5
+  gameManager: {fileID: 0}
 --- !u!1 &1020788824236206541
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,7 +779,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f25d6b439440b2248a42ec4d968c4411, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5d8a25fc95d502a4bb581b4811d408f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -811,10 +816,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.61
-  m_Height: 5.12
+  m_Radius: 2.551972
+  m_Height: 5.103944
   m_Direction: 1
-  m_Center: {x: 0.0000009536743, y: 0, z: 0}
+  m_Center: {x: -0.05802704, y: 0.05802802, z: 0}
 --- !u!114 &1020788824236206534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -831,3 +836,4 @@ MonoBehaviour:
   target: {fileID: 1020788823582787963}
   targetPosition: {x: 0, y: 0}
   movementSpeed: 5
+  gameManager: {fileID: 0}
