@@ -248,11 +248,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2711361099365996429, guid: 405d6c82a51527942a0ea6a3f1d62d05, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3679825349381762456, guid: 405d6c82a51527942a0ea6a3f1d62d05, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 405d6c82a51527942a0ea6a3f1d62d05, type: 3}
@@ -751,7 +751,7 @@ PrefabInstance:
       objectReference: {fileID: 1451816952}
     - target: {fileID: 5207759701748898007, guid: 0f93ad768d9d23e458295bceacf6c2a6, type: 3}
       propertyPath: orbitCount
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5207759701748898007, guid: 0f93ad768d9d23e458295bceacf6c2a6, type: 3}
       propertyPath: pauseButton
