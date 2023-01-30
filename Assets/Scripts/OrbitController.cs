@@ -26,6 +26,11 @@ public class OrbitController : MonoBehaviour
     {
         Rotation();
 
+       if( transform.childCount == 0)
+        {
+            rotationSpeed = 2;
+        }
+
     }
 
 
