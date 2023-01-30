@@ -48,8 +48,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<GameObject> orbitList = new List<GameObject>();
     [SerializeField] private List<GameObject> lastOrbitList = new List<GameObject>();
     private GameObject[] orbitArray;
-    [SerializeField] private List<Transform> orbitTransformList = new List<Transform>();
+    [SerializeField] private List<Vector2> orbitTransformList = new List<Vector2>();
     [SerializeField] private GameObject lastOrbit;
+    [SerializeField] private int lastOrbitCount;
 
 
 
@@ -57,11 +58,20 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        //Level Screen Lock System
+        if (SceneManager.GetActiveScene().buildIndex > PlayerPrefs.GetInt("MaxLevel"))
+        {
+
+            PlayerPrefs.SetInt("MaxLevel", SceneManager.GetActiveScene().buildIndex-1);
+        }
+
+
         gameManager = GameObject.FindGameObjectWithTag("GameController");
 
 
         sceneIndexNumber = SceneManager.GetActiveScene().buildIndex;
         PlayerPrefs.SetInt("SceneNumber", sceneIndexNumber);
+        
 
         StartSoundVibCheck();
         Time.timeScale = 1;
@@ -80,12 +90,12 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-          //  SetRebornPositions();
+           SetRebornPositions();
         }
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-           // RebornExp();
+           RebornExp();
         }
 
         //Debug.Log(orbitTransformList[0].transform.position);
@@ -350,8 +360,9 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < lastOrbit.transform.childCount; i++)
         {
             GameObject child = lastOrbit.transform.GetChild(i).gameObject;
-            orbitTransformList.Add(child.transform);
+            orbitTransformList.Add(child.transform.position);
             lastOrbitList.Add(child);
+            lastOrbitCount = orbitCount;
         }
     }
 
@@ -359,8 +370,9 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < lastOrbitList.Count; i++)
         {
-            lastOrbitList[i].transform.position = orbitTransformList[i].transform.position;
+            lastOrbitList[i].transform.position = orbitTransformList[i];
             lastOrbitList[i].transform.parent = lastOrbit.transform;
+            orbitCount = lastOrbitCount;
 
         }
     }

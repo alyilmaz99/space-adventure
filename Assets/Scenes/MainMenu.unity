@@ -833,7 +833,6 @@ GameObject:
   - component: {fileID: 1289641816}
   - component: {fileID: 1289641815}
   - component: {fileID: 1289641814}
-  - component: {fileID: 1289641819}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -948,18 +947,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1289641819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1289641813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e126c871ab9b264aa92fdac1067139e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1451783256
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,6 +956,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1451783257}
+  - component: {fileID: 1451783258}
   m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
@@ -1010,6 +998,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1451783258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451783256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef39f81286d642a4293d3f11736cba6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1753541243
 GameObject:
   m_ObjectHideFlags: 0
@@ -1813,16 +1813,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1289641819}
-        m_TargetAssemblyTypeName: LevelScreen, Assembly-CSharp
-        m_MethodName: levelButton
-        m_Mode: 1
+      - m_Target: {fileID: 1451783258}
+        m_TargetAssemblyTypeName: levelmanagement, Assembly-CSharp
+        m_MethodName: Scene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 6
+          m_StringArgument: 5
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &920945341383692933
@@ -1837,6 +1837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943a788c35643af4bb5dd0d320ee180f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelno: 0
   level: 6
   lockk: {fileID: 920945342709898791}
   star:
@@ -2129,6 +2130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943a788c35643af4bb5dd0d320ee180f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelno: 0
   level: 10
   lockk: {fileID: 920945342255654240}
   star:
@@ -2263,16 +2265,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1289641819}
-        m_TargetAssemblyTypeName: LevelScreen, Assembly-CSharp
-        m_MethodName: levelButton
-        m_Mode: 1
+      - m_Target: {fileID: 1451783258}
+        m_TargetAssemblyTypeName: levelmanagement, Assembly-CSharp
+        m_MethodName: Scene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 10
+          m_StringArgument: 9
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &920945341609351366
@@ -2592,10 +2594,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1289641819}
-        m_TargetAssemblyTypeName: LevelScreen, Assembly-CSharp
-        m_MethodName: levelButton
-        m_Mode: 1
+      - m_Target: {fileID: 1451783258}
+        m_TargetAssemblyTypeName: levelmanagement, Assembly-CSharp
+        m_MethodName: Scene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2616,6 +2618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943a788c35643af4bb5dd0d320ee180f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelno: 0
   level: 2
   lockk: {fileID: 920945342431328994}
   star:
@@ -2909,16 +2912,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1289641819}
-        m_TargetAssemblyTypeName: LevelScreen, Assembly-CSharp
-        m_MethodName: levelButton
-        m_Mode: 1
+      - m_Target: {fileID: 1451783258}
+        m_TargetAssemblyTypeName: levelmanagement, Assembly-CSharp
+        m_MethodName: Scene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 7
+          m_StringArgument: 6
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &920945341755368799
@@ -2933,6 +2936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943a788c35643af4bb5dd0d320ee180f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelno: 0
   level: 7
   lockk: {fileID: 920945342182002435}
   star:
@@ -3303,10 +3307,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1289641819}
-        m_TargetAssemblyTypeName: LevelScreen, Assembly-CSharp
-        m_MethodName: levelButton
-        m_Mode: 1
+      - m_Target: {fileID: 1451783258}
+        m_TargetAssemblyTypeName: levelmanagement, Assembly-CSharp
+        m_MethodName: Scene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3327,6 +3331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943a788c35643af4bb5dd0d320ee180f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelno: 0
   level: 3
   lockk: {fileID: 920945342180072464}
   star:
@@ -3557,16 +3562,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1289641819}
-        m_TargetAssemblyTypeName: LevelScreen, Assembly-CSharp
-        m_MethodName: levelButton
-        m_Mode: 1
+      - m_Target: {fileID: 1451783258}
+        m_TargetAssemblyTypeName: levelmanagement, Assembly-CSharp
+        m_MethodName: Scene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 8
+          m_StringArgument: 7
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &920945341944887838
@@ -3581,6 +3586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943a788c35643af4bb5dd0d320ee180f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelno: 0
   level: 8
   lockk: {fileID: 920945342281951738}
   star:
@@ -3775,16 +3781,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1289641819}
-        m_TargetAssemblyTypeName: LevelScreen, Assembly-CSharp
-        m_MethodName: levelButton
-        m_Mode: 1
+      - m_Target: {fileID: 1451783258}
+        m_TargetAssemblyTypeName: levelmanagement, Assembly-CSharp
+        m_MethodName: Scene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 4
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &920945342000095913
@@ -3799,6 +3805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943a788c35643af4bb5dd0d320ee180f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelno: 0
   level: 4
   lockk: {fileID: 920945341806469601}
   star:
@@ -4054,16 +4061,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1289641819}
-        m_TargetAssemblyTypeName: LevelScreen, Assembly-CSharp
-        m_MethodName: levelButton
-        m_Mode: 1
+      - m_Target: {fileID: 1451783258}
+        m_TargetAssemblyTypeName: levelmanagement, Assembly-CSharp
+        m_MethodName: Scene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 5
+          m_StringArgument: 4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &920945342035257647
@@ -4078,6 +4085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943a788c35643af4bb5dd0d320ee180f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelno: 0
   level: 5
   lockk: {fileID: 920945342725278001}
   star:
@@ -4641,16 +4649,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1289641819}
-        m_TargetAssemblyTypeName: LevelScreen, Assembly-CSharp
-        m_MethodName: levelButton
-        m_Mode: 1
+      - m_Target: {fileID: 1451783258}
+        m_TargetAssemblyTypeName: levelmanagement, Assembly-CSharp
+        m_MethodName: Scene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 9
+          m_StringArgument: 8
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &920945342251998877
@@ -4665,6 +4673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943a788c35643af4bb5dd0d320ee180f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelno: 0
   level: 9
   lockk: {fileID: 920945341684052004}
   star:
@@ -7305,6 +7314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943a788c35643af4bb5dd0d320ee180f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelno: 0
   level: 1
   lockk: {fileID: 920945342910621384}
   star:
@@ -7414,10 +7424,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1289641819}
-        m_TargetAssemblyTypeName: LevelScreen, Assembly-CSharp
-        m_MethodName: levelButton
-        m_Mode: 1
+      - m_Target: {fileID: 1451783258}
+        m_TargetAssemblyTypeName: levelmanagement, Assembly-CSharp
+        m_MethodName: Scene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
