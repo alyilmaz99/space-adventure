@@ -246,6 +246,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlackHole
       objectReference: {fileID: 0}
+    - target: {fileID: 2711361099365996429, guid: 405d6c82a51527942a0ea6a3f1d62d05, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3679825349381762456, guid: 405d6c82a51527942a0ea6a3f1d62d05, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 405d6c82a51527942a0ea6a3f1d62d05, type: 3}
 --- !u!1 &58297450
@@ -613,6 +621,11 @@ PrefabInstance:
       objectReference: {fileID: 1410989793}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ef3371e7cf867a408b927ddbf2850ff, type: 3}
+--- !u!1 &1205224971 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3679825349381762456, guid: 405d6c82a51527942a0ea6a3f1d62d05, type: 3}
+  m_PrefabInstance: {fileID: 55303919}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1225946958 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1722697335717176708, guid: 1ef3371e7cf867a408b927ddbf2850ff, type: 3}
@@ -721,6 +734,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2077428577}
     - target: {fileID: 5207759701748898007, guid: 0f93ad768d9d23e458295bceacf6c2a6, type: 3}
+      propertyPath: orbit4
+      value: 
+      objectReference: {fileID: 2078299806}
+    - target: {fileID: 5207759701748898007, guid: 0f93ad768d9d23e458295bceacf6c2a6, type: 3}
+      propertyPath: orbit5
+      value: 
+      objectReference: {fileID: 1205224971}
+    - target: {fileID: 5207759701748898007, guid: 0f93ad768d9d23e458295bceacf6c2a6, type: 3}
       propertyPath: endScreen
       value: 
       objectReference: {fileID: 1584530441}
@@ -730,7 +751,7 @@ PrefabInstance:
       objectReference: {fileID: 1451816952}
     - target: {fileID: 5207759701748898007, guid: 0f93ad768d9d23e458295bceacf6c2a6, type: 3}
       propertyPath: orbitCount
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5207759701748898007, guid: 0f93ad768d9d23e458295bceacf6c2a6, type: 3}
       propertyPath: pauseButton
@@ -781,5 +802,10 @@ PrefabInstance:
 --- !u!1 &2077428577 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1020788823899488851, guid: 405d6c82a51527942a0ea6a3f1d62d05, type: 3}
+  m_PrefabInstance: {fileID: 55303919}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2078299806 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2711361099365996429, guid: 405d6c82a51527942a0ea6a3f1d62d05, type: 3}
   m_PrefabInstance: {fileID: 55303919}
   m_PrefabAsset: {fileID: 0}
