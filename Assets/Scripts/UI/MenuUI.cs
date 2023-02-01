@@ -69,6 +69,20 @@ public class MenuUI : MonoBehaviour
         vibFixer = !vibFixer;
     }
 
+    ////////////////// Test ////////////////////////////////
+    public void DenemeLevelButton()
+    {
+        SceneManager.LoadScene(37);
+    }
+    public void DeletePlayerPrefs()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+
+
+    ////////////////////////////////////////////////
+
+
     void SoundVibUpdate()
     {
         if (soundFixer)
