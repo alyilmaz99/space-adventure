@@ -8,34 +8,28 @@ using UnityEngine.SceneManagement;
 public class rewardads : MonoBehaviour
 {
     private RewardedAd rewardedAd;
-
-    public string adUnityId;
-
+    private string adUnitId;
     public void Start()
     {
         MobileAds.Initialize(initStatus => { });
 
         RequestRewardedVideo();
 
-
-
-        //if (rewardedAd.IsLoaded())
-        //    rewardedAd.Show();
+        
     }
 
     public void RequestRewardedVideo()
     {
-        string adUnityId;
-#if UNITY_ANDROID
-        adUnityId = "ca-app-pub-3940256099942544/5224354917";
-#elif UNITY_IPHONE
+        string adUnitId;
+        #if UNITY_ANDROID
+            adUnitId = "ca-app-pub-3940256099942544/5224354917";
+        #elif UNITY_IPHONE
             adUnitId = "ca-app-pub-3940256099942544/1712485313";
-#else
+        #else
             adUnitId = "unexpected_platform";
-#endif
+        #endif
 
-        this.rewardedAd = new RewardedAd(adUnityId);
-
+        this.rewardedAd = new RewardedAd(adUnitId);
         // Called when an ad request has successfully loaded.
         this.rewardedAd.OnAdLoaded += HandleRewardedAdLoaded;
         // Called when an ad request failed to load.
@@ -89,7 +83,7 @@ public class rewardads : MonoBehaviour
 
     #region Ads Settings
 
-    // no ads satýn alma kontrolü yapýlacak. Reklamsýz izleme alýndýysa reklam izleme fonksiyonuna gidilmeyecek
+    // no ads satï¿½n alma kontrolï¿½ yapï¿½lacak. Reklamsï¿½z izleme alï¿½ndï¿½ysa reklam izleme fonksiyonuna gidilmeyecek
     public void WatchRebornAd()
     {
         WatchAd();
