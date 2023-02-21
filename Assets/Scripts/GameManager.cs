@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex > PlayerPrefs.GetInt("MaxLevel"))
         {
 
-            PlayerPrefs.SetInt("MaxLevel", SceneManager.GetActiveScene().buildIndex-1);
+            PlayerPrefs.SetInt("MaxLevel", SceneManager.GetActiveScene().buildIndex-4);
         }
 
 
