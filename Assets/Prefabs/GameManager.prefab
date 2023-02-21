@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5207759701748898004}
   - component: {fileID: 5207759701748898007}
   - component: {fileID: 1434779783}
+  - component: {fileID: 2524764221233464714}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -70,6 +71,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ee5734f3058716b4ab050f658dfe068d, type: 3}
   soundFixer: 0
   vibFixer: 0
+  gameManager: {fileID: 0}
+  orbitList: []
+  lastOrbitList: []
+  orbitTransformList: []
+  lastOrbit: {fileID: 0}
+  lastOrbitCount: 0
 --- !u!114 &1434779783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,3 +104,15 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 29598cb9ec76db749a99e75547720e3d, type: 3}
   - {fileID: 21300000, guid: 1d59a970cb98f45498ab63826c0a095f, type: 3}
   planetList: []
+--- !u!114 &2524764221233464714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5207759701748898006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2763560378436f147b1cbac4e5a0a3bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

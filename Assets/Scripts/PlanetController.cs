@@ -57,7 +57,7 @@ public class PlanetController : MonoBehaviour
         else if (other.gameObject.tag == "Blackhole")
         {
             //Stars
-            PlayerPrefs.SetInt("s" + (SceneManager.GetActiveScene().buildIndex-1).ToString(), 3 );
+            PlayerPrefs.SetInt("s" + (SceneManager.GetActiveScene().buildIndex-4).ToString(), 3 );
             Destroy(gameObject);
             gameManager.GetComponent<GameManager>().successCheck = true;
 

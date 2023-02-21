@@ -46,7 +46,7 @@ public class MenuUI : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(1);
         }
     }
 
@@ -72,7 +72,7 @@ public class MenuUI : MonoBehaviour
     ////////////////// Test ////////////////////////////////
     public void DenemeLevelButton()
     {
-        SceneManager.LoadScene(37);
+        SceneManager.LoadScene(1);
     }
     public void DeletePlayerPrefs()
     {
