@@ -9,6 +9,8 @@ public class rewardads : MonoBehaviour
 {
     private RewardedAd rewardedAd;
     private string adUnitId;
+
+    [Obsolete]
     public void Start()
     {
         MobileAds.Initialize(initStatus => { });
@@ -17,17 +19,26 @@ public class rewardads : MonoBehaviour
 
         
     }
-
+    [Obsolete]
     public void RequestRewardedVideo()
     {
+        if (this.rewardedAd != null)
+        {
+            this.rewardedAd.Destroy();
+
+        }
+
+        Debug.Log("reklam yüklüyo");
         string adUnitId;
         #if UNITY_ANDROID
             adUnitId = "ca-app-pub-3940256099942544/5224354917";
-        #elif UNITY_IPHONE
+            //adUnitId = "ca-app-pub-3940256099942544/5354046379";
+
+#elif UNITY_IPHONE
             adUnitId = "ca-app-pub-3940256099942544/1712485313";
-        #else
+#else
             adUnitId = "unexpected_platform";
-        #endif
+#endif
 
         this.rewardedAd = new RewardedAd(adUnitId);
         // Called when an ad request has successfully loaded.
@@ -47,6 +58,12 @@ public class rewardads : MonoBehaviour
         AdRequest request = new AdRequest.Builder().Build();
         // Load the rewarded ad with the request.
         this.rewardedAd.LoadAd(request);
+        if (this.rewardedAd.IsLoaded())
+        {
+            Debug.Log("loaded");
+        }
+
+        else { Debug.Log("not loaded"); }
     }
 
     public void HandleRewardedAdLoaded(object sender, EventArgs args)
@@ -84,22 +101,32 @@ public class rewardads : MonoBehaviour
     #region Ads Settings
 
     // no ads sat�n alma kontrol� yap�lacak. Reklams�z izleme al�nd�ysa reklam izleme fonksiyonuna gidilmeyecek
+
+    [Obsolete]
     public void WatchRebornAd()
     {
         WatchAd();
     }
+
+    [Obsolete]
     void WatchAd()
     {
-        if (this.rewardedAd != null)
-        {
-            this.rewardedAd.Destroy();
+        //if (this.rewardedAd != null)
+        //{
+        //    this.rewardedAd.Destroy();
 
-        }
+        //}
 
         if (this.rewardedAd.IsLoaded())
         {
             this.rewardedAd.Show();
         }
+
+        else { Debug.Log("not loaded"); }
+               
+        
+            
+        
         this.rewardedAd.OnUserEarnedReward += Replay;
 
         
