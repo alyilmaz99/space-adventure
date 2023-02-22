@@ -254,8 +254,8 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: "C:/Users/draw6/OneDrive/Masa\xFCst\xFC/space/keystore/user.keystore"
-  AndroidKeyaliasName: spaceadventure
+  AndroidKeystoreName: "C:/Users/draw6/OneDrive/Masa\xFCst\xFC/space/space keystore/user.keystore"
+  AndroidKeyaliasName: 1
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1

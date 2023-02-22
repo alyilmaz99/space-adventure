@@ -31,7 +31,7 @@ public class rewardads : MonoBehaviour
         Debug.Log("reklam yüklüyo");
         string adUnitId;
         #if UNITY_ANDROID
-            adUnitId = "ca-app-pub-3940256099942544/5224354917";
+            adUnitId = "ca-app-pub-2763655103678935/4806279558";
             //adUnitId = "ca-app-pub-3940256099942544/5354046379";
 
 #elif UNITY_IPHONE
