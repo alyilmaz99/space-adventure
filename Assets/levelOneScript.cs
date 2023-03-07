@@ -3,15 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class levelbuttonscript : MonoBehaviour
+public class levelOneScript : MonoBehaviour
 {
-
-    // Yýldýz sayýsý Planetcontrol scripti içinde blackhole ile temas edilince kazanýlýyor.
-    //Her levele girildiðinde MaxLevel playerprefs kontrol ediliyor. Activescene numberdan büyükse maxlevel sayýmýz artýyor.
-    //Kilidi kaldýrýyoruz
-
-
-
     public int levelno;
     public int level;
     public GameObject lockk;
@@ -29,10 +22,9 @@ public class levelbuttonscript : MonoBehaviour
         levelButtonFixer();
     }
 
-
     void levelButtonFixer()
     {
-        levelno = PlayerPrefs.GetInt("MaxLevel");
+        levelno = 1;
         stars = PlayerPrefs.GetInt("s" + level.ToString());
         number.text = level.ToString();
         if (level <= levelno)

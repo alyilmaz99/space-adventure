@@ -59,11 +59,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         //Level Screen Lock System
-        if (SceneManager.GetActiveScene().buildIndex > PlayerPrefs.GetInt("MaxLevel"))
-        {
-
-            PlayerPrefs.SetInt("MaxLevel", SceneManager.GetActiveScene().buildIndex-4);
-        }
+        
 
 
         gameManager = GameObject.FindGameObjectWithTag("GameController");
@@ -143,15 +139,29 @@ public class GameManager : MonoBehaviour
 
     void MouseClick()
     {
+        //if (movementCheck)
+        //{
+        //    if (Input.GetMouseButtonUp(0) && !EventSystem.current.IsPointerOverGameObject())
+        //    {
+        //        movementCheck = false;
+        //        OrbitChange();
+        //    }
+        //}
+
+        
+
         if (movementCheck)
         {
-            if (Input.GetMouseButtonUp(0) && !EventSystem.current.IsPointerOverGameObject())
+            for (int i = 0; i < Input.touchCount; ++i)
             {
-                movementCheck = false;
-                OrbitChange();
+                if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
+                {
+                    movementCheck = false;
+                    OrbitChange();
+                }
             }
         }
-        
+
     }
 
 

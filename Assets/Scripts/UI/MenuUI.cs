@@ -28,6 +28,9 @@ public class MenuUI : MonoBehaviour
         StartSoundVibCheck();
 
         sceneIndexNumber=PlayerPrefs.GetInt("SceneNumber");
+
+        
+
     }
 
     

@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1787a0ab0d0cb4d4bb3e09bfdfd0c1fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 6
+  rotationSpeed: 6.5
   direction: 1
   gameManager: {fileID: 0}
 --- !u!136 &1020788822535352037
@@ -349,7 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1787a0ab0d0cb4d4bb3e09bfdfd0c1fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 3
+  rotationSpeed: 3.2
   direction: 1
   gameManager: {fileID: 0}
 --- !u!136 &1020788823042797547
@@ -569,7 +569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1787a0ab0d0cb4d4bb3e09bfdfd0c1fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 9
+  rotationSpeed: 9.5
   direction: 1
   gameManager: {fileID: 0}
 --- !u!136 &7709438212114998197
@@ -819,7 +819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1787a0ab0d0cb4d4bb3e09bfdfd0c1fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 12
+  rotationSpeed: 13
   direction: 1
   gameManager: {fileID: 0}
 --- !u!136 &6673739592701965266
@@ -935,7 +935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1787a0ab0d0cb4d4bb3e09bfdfd0c1fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 14.5
+  rotationSpeed: 16
   direction: 1
   gameManager: {fileID: 0}
 --- !u!136 &5866314494394291423

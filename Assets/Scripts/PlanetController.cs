@@ -60,6 +60,11 @@ public class PlanetController : MonoBehaviour
             PlayerPrefs.SetInt("s" + (SceneManager.GetActiveScene().buildIndex-4).ToString(), 3 );
             Destroy(gameObject);
             gameManager.GetComponent<GameManager>().successCheck = true;
+            if (SceneManager.GetActiveScene().buildIndex > PlayerPrefs.GetInt("MaxLevel"))
+            {
+
+                PlayerPrefs.SetInt("MaxLevel", SceneManager.GetActiveScene().buildIndex - 3);
+            }
 
         }
 
